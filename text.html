@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="test.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Assessment Settings</h1>
+    </header>
+    <main>
+        <section id="visibility">
+            <h2>Assessment Visibility</h2>
+            <label>
+                <input type="radio" name="visibility" value="public" checked> Visible to All Students
+            </label>
+            <label>
+                <input type="radio" name="visibility" value="groups"> Visible to Specific Groups
+            </label>
+            <label>
+                <input type="radio" name="visibility" value="private"> Private (Teacher-Only)
+            </label>
+        </section>
+
+        <section id="accessPermissions">
+            <h2>Access Permissions</h2>
+            <input type="text" id="accessList" placeholder="Enter student IDs or class names, separated by commas">
+        </section>
+
+        <section id="timeAndDate">
+            <h2>Time and Date Settings</h2>
+            <label for="startDate">Start Date:</label>
+            <input type="datetime-local" id="startDate">
+
+            <label for="endDate">End Date:</label>
+            <input type="datetime-local" id="endDate">
+        </section>
+
+        <section id="attemptLimits">
+            <h2>Attempt Limits</h2>
+            <label for="attempts">Number of Attempts:</label>
+            <input type="number" id="attempts" min="1" value="1">
+        </section>
+
+        <section id="feedbackTiming">
+            <h2>Feedback Timing</h2>
+            <label>
+                <input type="radio" name="feedbackTiming" value="immediate" checked> Immediate After Submission
+            </label>
+            <label>
+                <input type="radio" name="feedbackTiming" value="postClose"> After Assessment Closes
+            </label>
+            <label>
+                <input type="radio" name="feedbackTiming" value="manual"> Manual Release by Teacher
+            </label>
+        </section>
+
+        <section id="gradeDisplay">
+            <h2>Grade Display Options</h2>
+            <label>
+                <input type="radio" name="gradeDisplay" value="immediate" checked> Show Grades Immediately
+            </label>
+            <label>
+                <input type="radio" name="gradeDisplay" value="afterAll"> After All Submissions Are Graded
+            </label>
+        </section>
+
+        <section id="notificationSettings">
+            <h2>Notification Settings</h2>
+            <label>
+                <input type="checkbox" id="startNotification"> Notify When Students Start Assessment
+            </label>
+            <label>
+                <input type="checkbox" id="completionNotification"> Notify When Students Complete Assessment
+            </label>
+            <label>
+                <input type="checkbox" id="gradingNotification"> Notify When Grading Is Complete
+            </label>
+        </section>
+
+        <section id="controls">
+            <button id="saveSettingsBtn">Save Settings</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
